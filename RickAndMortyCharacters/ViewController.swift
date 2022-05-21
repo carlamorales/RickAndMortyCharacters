@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  RickAndMortyCharacters
-//
-//  Created by Mobdev on 20-05-22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -14,6 +7,4 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
 }
-
