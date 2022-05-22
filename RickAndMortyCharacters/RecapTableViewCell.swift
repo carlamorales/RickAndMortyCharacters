@@ -2,21 +2,26 @@ import UIKit
 
 class RecapTableViewCell: UITableViewCell {
     
+    var content: Character? {
+        didSet {
+            prepareCell()
+            prepareCellStyles()
+            prepareCellConstraints()
+        }
+    }
+    
     let characterNameLabel = UILabel()
     let characterSpeciesLabel = UILabel()
     let characterPictureImageView = UIImageView()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        prepareCell()
-        prepareCellStyles()
-        prepareCellConstraints()
-    }
     
     private func prepareCell() {
         contentView.addSubview(characterNameLabel)
         contentView.addSubview(characterSpeciesLabel)
         contentView.addSubview(characterPictureImageView)
+        
+        characterNameLabel.text = content?.name
+        characterSpeciesLabel.text = content?.species
+        characterPictureImageView.downloaded(from: content?.image ?? "")
     }
     
     private func prepareCellStyles() {
@@ -45,7 +50,4 @@ class RecapTableViewCell: UITableViewCell {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

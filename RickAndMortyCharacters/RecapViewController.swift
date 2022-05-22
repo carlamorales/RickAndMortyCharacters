@@ -46,10 +46,7 @@ extension RecapViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recapCell") as! RecapTableViewCell
-        let cellContent = charactersArray[indexPath.row]
-        cell.characterPictureImageView.downloaded(from: (cellContent.image))
-        cell.characterNameLabel.text = cellContent.name
-        cell.characterSpeciesLabel.text = cellContent.species
+        cell.content = charactersArray[indexPath.row]
         return cell
     }
 }
