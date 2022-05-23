@@ -2,7 +2,7 @@ import UIKit
 
 class RecapTableViewCell: UITableViewCell {
     
-    var content: Character? {
+    var character: Character? {
         didSet {
             prepareCell()
             prepareCellStyles()
@@ -23,10 +23,10 @@ class RecapTableViewCell: UITableViewCell {
         contentView.addSubview(characterPictureImageView)
         contentView.addSubview(expandAndContractCellButton)
         
-        characterNameLabel.text = content?.name
-        characterSpeciesLabel.text = content?.species
-        characterStatusLabel.text = content?.status
-        characterPictureImageView.downloaded(from: content?.image ?? "")
+        characterNameLabel.text = character?.name
+        characterSpeciesLabel.text = character?.species
+        characterStatusLabel.text = character?.status
+        characterPictureImageView.downloaded(from: character?.image ?? "")
     }
     
     private func prepareCellStyles() {

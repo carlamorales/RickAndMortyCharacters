@@ -2,7 +2,7 @@ import UIKit
 
 class DetailPictureTableViewCell: UITableViewCell {
     
-    var content: Character? {
+    var character: Character? {
         didSet {
             prepareCell()
             prepareCellStyles()
@@ -14,7 +14,7 @@ class DetailPictureTableViewCell: UITableViewCell {
     
     private func prepareCell() {
         contentView.addSubview(characterPictureImageView)
-        characterPictureImageView.downloaded(from: content?.image ?? "")
+        characterPictureImageView.downloaded(from: character?.image ?? "")
     }
     
     private func prepareCellStyles() {

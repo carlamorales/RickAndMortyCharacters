@@ -49,7 +49,7 @@ extension RecapViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recapCell") as! RecapTableViewCell
-        cell.content = charactersArray[indexPath.row]
+        cell.character = charactersArray[indexPath.row]
         
         cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
         cell.expandAndContractCellButton.tag = indexPath.row
@@ -69,7 +69,7 @@ extension RecapViewController: UITableViewDataSource {
 extension RecapViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        detailViewController.characterModel = charactersArray[indexPath.row]
+        detailViewController.character = charactersArray[indexPath.row]
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

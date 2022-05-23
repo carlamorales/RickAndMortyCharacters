@@ -3,7 +3,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var detailTable = UITableView()
-    var characterModel: Character?
+    var character: Character?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +35,16 @@ extension DetailViewController: UITableViewDataSource {
         switch indexPath.row {
         case .zero:
             let cell = tableView.dequeueReusableCell(withIdentifier: "pictureCell") as! DetailPictureTableViewCell
-            cell.content = characterModel
+            cell.character = character
             return cell
         case 1:
-            return prepareTextCell(tableView, key: "Id:", value: "\(characterModel?.identifier ?? 0)")
+            return prepareTextCell(tableView, key: "Id:", value: "\(character?.identifier ?? 0)")
         case 2:
-            return prepareTextCell(tableView, key: "Name:", value: characterModel?.name ?? "")
+            return prepareTextCell(tableView, key: "Name:", value: character?.name ?? "")
         case 3:
-            return prepareTextCell(tableView, key: "Status:", value: characterModel?.status ?? "")
+            return prepareTextCell(tableView, key: "Status:", value: character?.status ?? "")
         case 4:
-            return prepareTextCell(tableView, key: "Species:", value: characterModel?.species ?? "")
+            return prepareTextCell(tableView, key: "Species:", value: character?.species ?? "")
         default:
             return UITableViewCell()
         }
