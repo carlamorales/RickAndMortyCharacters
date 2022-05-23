@@ -30,6 +30,7 @@ class DetailTextTableViewCell: UITableViewCell {
             keyLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             keyLabel.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -8),
         ])
+        
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             valueLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),

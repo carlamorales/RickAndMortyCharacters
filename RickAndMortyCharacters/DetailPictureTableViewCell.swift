@@ -2,17 +2,19 @@ import UIKit
 
 class DetailPictureTableViewCell: UITableViewCell {
     
-    let characterPictureImageView = UIImageView()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        prepareCell()
-        prepareCellStyles()
-        prepareCellConstraints()
+    var content: Character? {
+        didSet {
+            prepareCell()
+            prepareCellStyles()
+            prepareCellConstraints()
+        }
     }
+    
+    private let characterPictureImageView = UIImageView()
     
     private func prepareCell() {
         contentView.addSubview(characterPictureImageView)
+        characterPictureImageView.downloaded(from: content?.image ?? "")
     }
     
     private func prepareCellStyles() {
@@ -29,9 +31,5 @@ class DetailPictureTableViewCell: UITableViewCell {
             characterPictureImageView.widthAnchor.constraint(equalToConstant: 240),
         ])
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
 }
