@@ -38,7 +38,7 @@ extension DetailViewController: UITableViewDataSource {
             cell.content = characterModel
             return cell
         case 1:
-            return prepareTextCell(tableView, key: "Id:", value: "\(characterModel?.id ?? 0)")
+            return prepareTextCell(tableView, key: "Id:", value: "\(characterModel?.identifier ?? 0)")
         case 2:
             return prepareTextCell(tableView, key: "Name:", value: characterModel?.name ?? "")
         case 3:

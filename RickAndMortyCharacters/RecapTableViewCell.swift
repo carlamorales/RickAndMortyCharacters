@@ -13,11 +13,13 @@ class RecapTableViewCell: UITableViewCell {
     private let characterNameLabel = UILabel()
     private let characterSpeciesLabel = UILabel()
     private let characterPictureImageView = UIImageView()
+    let expandAndContractCellButton = UIButton()
     
     private func prepareCell() {
         contentView.addSubview(characterNameLabel)
         contentView.addSubview(characterSpeciesLabel)
         contentView.addSubview(characterPictureImageView)
+        contentView.addSubview(expandAndContractCellButton)
         
         characterNameLabel.text = content?.name
         characterSpeciesLabel.text = content?.species
@@ -27,6 +29,10 @@ class RecapTableViewCell: UITableViewCell {
     private func prepareCellStyles() {
         characterNameLabel.font = UIFont.systemFont(ofSize: 20)
         characterSpeciesLabel.font = UIFont.systemFont(ofSize: 20)
+        expandAndContractCellButton.backgroundColor = .black
+        expandAndContractCellButton.layer.cornerRadius = 5
+        expandAndContractCellButton.setTitle("Click", for: .normal)
+        expandAndContractCellButton.setTitleColor(.white, for: .normal)
     }
     
     private func prepareCellConstraints() {
@@ -47,6 +53,14 @@ class RecapTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             characterSpeciesLabel.topAnchor.constraint(equalTo: characterNameLabel.bottomAnchor, constant: 16),
             characterSpeciesLabel.leadingAnchor.constraint(equalTo: characterPictureImageView.trailingAnchor),
+        ])
+        
+        expandAndContractCellButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            expandAndContractCellButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            expandAndContractCellButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            expandAndContractCellButton.heightAnchor.constraint(equalToConstant: 35),
+            expandAndContractCellButton.widthAnchor.constraint(equalToConstant: 75),
         ])
     }
     
