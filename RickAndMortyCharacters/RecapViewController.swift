@@ -37,6 +37,9 @@ class RecapViewController: UIViewController {
         }
     }
     
+    var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+    var shouldCellBeExtended = false
+    
 }
 
 extension RecapViewController: UITableViewDataSource {
@@ -47,7 +50,19 @@ extension RecapViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recapCell") as! RecapTableViewCell
         cell.content = charactersArray[indexPath.row]
+        
+        cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
+        cell.expandAndContractCellButton.tag = indexPath.row
+        
         return cell
+    }
+    
+    @objc func expandAndContractCell(sender: UIButton) {
+        selectedIndex = IndexPath(row: sender.tag, section: 0)
+        shouldCellBeExtended.toggle()
+        recapTable.beginUpdates()
+        recapTable.reloadRows(at: [selectedIndex], with: .automatic)
+        recapTable.endUpdates()
     }
 }
 
@@ -59,6 +74,9 @@ extension RecapViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if shouldCellBeExtended && selectedIndex == indexPath {
+            return 200
+        }
         return 100
     }
 }
