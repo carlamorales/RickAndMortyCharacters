@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
         view.addSubview(detailTable)
         detailTable.pin(to: view)
         detailTable.register(DetailPictureTableViewCell.self, forCellReuseIdentifier: "pictureCell")
+        detailTable.register(DetailTextTableViewCell.self, forCellReuseIdentifier: "textCell")
         title = "CHARACTERS DETAIL"
     }
     
@@ -36,11 +37,25 @@ extension DetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "pictureCell") as! DetailPictureTableViewCell
             cell.characterPictureImageView.downloaded(from: content?.image ?? "")
             return cell
+        case 1:
+            return prepareTextCell(tableView, key: "Id:", value: "\(content?.id ?? 0)")
+        case 2:
+            return prepareTextCell(tableView, key: "Name:", value: content?.name ?? "")
+        case 3:
+            return prepareTextCell(tableView, key: "Status:", value: content?.status ?? "")
+        case 4:
+            return prepareTextCell(tableView, key: "Species:", value: content?.species ?? "")
         default:
             return UITableViewCell()
         }
     }
     
+    private func prepareTextCell(_ tableView: UITableView, key: String, value: String) -> DetailTextTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "textCell") as! DetailTextTableViewCell
+        cell.keyLabel.text = key
+        cell.valueLabel.text = value
+        return cell
+    }
 }
 
 extension DetailViewController: UITableViewDelegate {
@@ -49,7 +64,7 @@ extension DetailViewController: UITableViewDelegate {
         case .zero:
             return 260
         default:
-            return 100
+            return 80
         }
     }
 }

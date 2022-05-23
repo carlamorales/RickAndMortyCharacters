@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */; };
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
 		0483D7322838422000890660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483D7312838422000890660 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
 		0483D72E2838422000890660 /* RickAndMortyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 				0498BF572839A75700339FBA /* RecapTableViewCell.swift */,
 				045A7180283B104400D02C7A /* DetailViewController.swift */,
 				045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */,
+				0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */,
 				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
 				0498BF592839CCF800339FBA /* Character.swift */,
 				0498BF552839987400339FBA /* PinToSuperViewExtension.swift */,
@@ -161,6 +164,7 @@
 				045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */,
 				0483D7322838422000890660 /* AppDelegate.swift in Sources */,
 				045A7181283B104400D02C7A /* DetailViewController.swift in Sources */,
+				0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
