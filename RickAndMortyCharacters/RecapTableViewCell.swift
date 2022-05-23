@@ -10,9 +10,9 @@ class RecapTableViewCell: UITableViewCell {
         }
     }
     
-    let characterNameLabel = UILabel()
-    let characterSpeciesLabel = UILabel()
-    let characterPictureImageView = UIImageView()
+    private let characterNameLabel = UILabel()
+    private let characterSpeciesLabel = UILabel()
+    private let characterPictureImageView = UIImageView()
     
     private func prepareCell() {
         contentView.addSubview(characterNameLabel)
