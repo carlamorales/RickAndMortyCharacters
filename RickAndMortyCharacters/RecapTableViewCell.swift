@@ -12,27 +12,32 @@ class RecapTableViewCell: UITableViewCell {
     
     private let characterNameLabel = UILabel()
     private let characterSpeciesLabel = UILabel()
+    private let characterStatusLabel = UILabel()
     private let characterPictureImageView = UIImageView()
     let expandAndContractCellButton = UIButton()
     
     private func prepareCell() {
         contentView.addSubview(characterNameLabel)
         contentView.addSubview(characterSpeciesLabel)
+        contentView.addSubview(characterStatusLabel)
         contentView.addSubview(characterPictureImageView)
         contentView.addSubview(expandAndContractCellButton)
         
         characterNameLabel.text = content?.name
         characterSpeciesLabel.text = content?.species
+        characterStatusLabel.text = content?.status
         characterPictureImageView.downloaded(from: content?.image ?? "")
     }
     
     private func prepareCellStyles() {
         characterNameLabel.font = UIFont.systemFont(ofSize: 20)
         characterSpeciesLabel.font = UIFont.systemFont(ofSize: 20)
+        characterStatusLabel.font = UIFont.systemFont(ofSize: 20)
         expandAndContractCellButton.backgroundColor = .black
         expandAndContractCellButton.layer.cornerRadius = 5
         expandAndContractCellButton.setTitle("Click", for: .normal)
         expandAndContractCellButton.setTitleColor(.white, for: .normal)
+        contentView.clipsToBounds = true
     }
     
     private func prepareCellConstraints() {
@@ -45,7 +50,7 @@ class RecapTableViewCell: UITableViewCell {
         
         characterNameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            characterNameLabel.topAnchor.constraint(equalTo: characterPictureImageView.topAnchor, constant: 8),
+            characterNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             characterNameLabel.leadingAnchor.constraint(equalTo: characterPictureImageView.trailingAnchor),
         ])
         
@@ -53,6 +58,12 @@ class RecapTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             characterSpeciesLabel.topAnchor.constraint(equalTo: characterNameLabel.bottomAnchor, constant: 16),
             characterSpeciesLabel.leadingAnchor.constraint(equalTo: characterPictureImageView.trailingAnchor),
+        ])
+        
+        characterStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            characterStatusLabel.topAnchor.constraint(equalTo: characterSpeciesLabel.bottomAnchor, constant: 16),
+            characterStatusLabel.leadingAnchor.constraint(equalTo: characterPictureImageView.trailingAnchor),
         ])
         
         expandAndContractCellButton.translatesAutoresizingMaskIntoConstraints = false

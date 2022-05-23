@@ -75,7 +75,7 @@ extension RecapViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if shouldCellBeExtended && selectedIndex == indexPath {
-            return 200
+            return 150
         }
         return 100
     }
