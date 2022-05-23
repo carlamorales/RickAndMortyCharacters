@@ -54,6 +54,7 @@ extension RecapViewController: UITableViewDataSource {
 extension RecapViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
+        detailViewController.content = charactersArray[indexPath.row]
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
