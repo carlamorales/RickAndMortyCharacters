@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
         detailTable.pin(to: view)
         detailTable.register(DetailPictureTableViewCell.self, forCellReuseIdentifier: "pictureCell")
         detailTable.register(DetailTextTableViewCell.self, forCellReuseIdentifier: "textCell")
-        title = "CHARACTERS DETAIL"
+        title = "CHARACTER DETAIL"
     }
     
     private func prepareTableDelegates() {

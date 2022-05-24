@@ -10,8 +10,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .systemBackground
         
         let apiCall = ApiCall()
+        let apiCallErrorToDomainErrorMapper = ApiCallErrorToDomainErrorMapper()
+        let repository = RickAndMortyCharactersRepository(
+            apiRest: apiCall,
+            apiCallErrorToDomainErrorMapper: apiCallErrorToDomainErrorMapper
+        )
         let recapViewController = RecapViewController()
-        recapViewController.apiRest = apiCall
+        recapViewController.repository = repository
         
         let navigationController = UINavigationController(rootViewController: recapViewController)
         window?.rootViewController = navigationController

@@ -4,7 +4,7 @@ class RecapViewController: UIViewController {
     
     var recapTable = UITableView()
     var charactersArray: [Character] = []
-    var apiRest: ApiRest?
+    var repository: Repository?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +26,16 @@ class RecapViewController: UIViewController {
     }
     
     private func prepareFetchData() {
-        apiRest?.fetchData { characters, error in
+        repository?.fetch(onCompletion: { characters, error in
             DispatchQueue.main.async {
                 guard let characters = characters else {
-                    print(error?.message ?? "Error")
+                    print(error as Any)
                     return
                 }
                 self.charactersArray = characters
                 self.recapTable.reloadData()
             }
-        }
+        })
     }
     
     var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
