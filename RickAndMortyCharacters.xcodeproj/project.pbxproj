@@ -10,6 +10,10 @@
 		0422FAC3283D3DF20023BE66 /* GetCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422FAC2283D3DF20023BE66 /* GetCharactersUseCase.swift */; };
 		0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */; };
 		04391F9D283D5F9B00F84E6A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391F9C283D5F9B00F84E6A /* ServiceLocator.swift */; };
+		04391F9F283D6A1F00F84E6A /* RecapViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391F9E283D6A1F00F84E6A /* RecapViewDataSource.swift */; };
+		04391FA1283D6A4500F84E6A /* RecapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391FA0283D6A4500F84E6A /* RecapViewDelegate.swift */; };
+		04391FA3283D80ED00F84E6A /* DetailViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391FA2283D80ED00F84E6A /* DetailViewDataSource.swift */; };
+		04391FA5283D810A00F84E6A /* DetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391FA4283D810A00F84E6A /* DetailViewDelegate.swift */; };
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
 		046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */; };
@@ -46,6 +50,10 @@
 		0422FAC2283D3DF20023BE66 /* GetCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersUseCase.swift; sourceTree = "<group>"; };
 		0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
 		04391F9C283D5F9B00F84E6A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		04391F9E283D6A1F00F84E6A /* RecapViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewDataSource.swift; sourceTree = "<group>"; };
+		04391FA0283D6A4500F84E6A /* RecapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewDelegate.swift; sourceTree = "<group>"; };
+		04391FA2283D80ED00F84E6A /* DetailViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataSource.swift; sourceTree = "<group>"; };
+		04391FA4283D810A00F84E6A /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
 		046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallErrorToDomainErrorMapper.swift; sourceTree = "<group>"; };
@@ -190,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				0483D7352838422000890660 /* RecapViewController.swift */,
+				04391F9E283D6A1F00F84E6A /* RecapViewDataSource.swift */,
+				04391FA0283D6A4500F84E6A /* RecapViewDelegate.swift */,
 			);
 			path = Recap;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				045A7180283B104400D02C7A /* DetailViewController.swift */,
+				04391FA2283D80ED00F84E6A /* DetailViewDataSource.swift */,
+				04391FA4283D810A00F84E6A /* DetailViewDelegate.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -364,6 +376,7 @@
 				0422FAC3283D3DF20023BE66 /* GetCharactersUseCase.swift in Sources */,
 				0498BF5E283A0DCC00339FBA /* DownloadedFromUrlExtension.swift in Sources */,
 				0498BF5A2839CCF800339FBA /* Character.swift in Sources */,
+				04391FA1283D6A4500F84E6A /* RecapViewDelegate.swift in Sources */,
 				046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */,
 				0498BF562839987400339FBA /* PinToSuperViewExtension.swift in Sources */,
 				048C9366283CB90F00EBCA55 /* Repository.swift in Sources */,
@@ -371,9 +384,12 @@
 				045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */,
 				048C936E283CC01C00EBCA55 /* Mapper.swift in Sources */,
 				048C9369283CB9C100EBCA55 /* RickAndMortyCharactersRepository.swift in Sources */,
+				04391F9F283D6A1F00F84E6A /* RecapViewDataSource.swift in Sources */,
 				0483D7322838422000890660 /* AppDelegate.swift in Sources */,
+				04391FA3283D80ED00F84E6A /* DetailViewDataSource.swift in Sources */,
 				04991976283C8C3B009FD72B /* ApiCallError.swift in Sources */,
 				04391F9D283D5F9B00F84E6A /* ServiceLocator.swift in Sources */,
+				04391FA5283D810A00F84E6A /* DetailViewDelegate.swift in Sources */,
 				045A7181283B104400D02C7A /* DetailViewController.swift in Sources */,
 				048C936B283CBA8D00EBCA55 /* DomainError.swift in Sources */,
 				0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */,

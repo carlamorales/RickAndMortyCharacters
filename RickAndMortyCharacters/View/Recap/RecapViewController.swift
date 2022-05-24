@@ -2,9 +2,21 @@ import UIKit
 
 class RecapViewController: UIViewController {
     
+    private var viewDataSource: RecapViewDataSource?
+    private var viewDelegate: RecapViewDelegate?
+    
     var recapTable = UITableView()
     var charactersArray: [Character] = []
     var getCharactersUseCase: GetCharactersUseCase?
+    
+    var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+    var shouldCellBeExtended = false
+    
+    convenience init(viewDataSource:RecapViewDataSource, viewDelegate: RecapViewDelegate) {
+        self.init()
+        self.viewDataSource = viewDataSource
+        self.viewDelegate = viewDelegate
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +33,10 @@ class RecapViewController: UIViewController {
     }
     
     private func prepareTableDelegates() {
-        recapTable.dataSource = self
-        recapTable.delegate = self
+        recapTable.dataSource = viewDataSource
+        viewDataSource?.view = self
+        recapTable.delegate = viewDelegate
+        viewDelegate?.view = self
     }
     
     private func prepareFetchData() {
@@ -38,46 +52,4 @@ class RecapViewController: UIViewController {
         })
     }
     
-    var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
-    var shouldCellBeExtended = false
-    
-}
-
-extension RecapViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return charactersArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recapCell") as! RecapTableViewCell
-        cell.character = charactersArray[indexPath.row]
-        
-        cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
-        cell.expandAndContractCellButton.tag = indexPath.row
-        
-        return cell
-    }
-    
-    @objc func expandAndContractCell(sender: UIButton) {
-        selectedIndex = IndexPath(row: sender.tag, section: 0)
-        shouldCellBeExtended.toggle()
-        recapTable.beginUpdates()
-        recapTable.reloadRows(at: [selectedIndex], with: .automatic)
-        recapTable.endUpdates()
-    }
-}
-
-extension RecapViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController()
-        detailViewController.character = charactersArray[indexPath.row]
-        navigationController?.pushViewController(detailViewController, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if shouldCellBeExtended && selectedIndex == indexPath {
-            return 150
-        }
-        return 100
-    }
 }
