@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0422FAC3283D3DF20023BE66 /* GetCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422FAC2283D3DF20023BE66 /* GetCharactersUseCase.swift */; };
 		0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */; };
+		04391F9D283D5F9B00F84E6A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391F9C283D5F9B00F84E6A /* ServiceLocator.swift */; };
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
 		046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0422FAC2283D3DF20023BE66 /* GetCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersUseCase.swift; sourceTree = "<group>"; };
 		0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
+		04391F9C283D5F9B00F84E6A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
 		046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallErrorToDomainErrorMapper.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		04391F9B283D5F6400F84E6A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				04391F9C283D5F9B00F84E6A /* ServiceLocator.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		0483D7252838422000890660 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		0483D7302838422000890660 /* RickAndMortyCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				04391F9B283D5F6400F84E6A /* DI */,
 				04991980283C9BF9009FD72B /* Domain */,
 				0499197E283C9B64009FD72B /* Data */,
 				0499197C283C98E3009FD72B /* Network */,
@@ -362,6 +373,7 @@
 				048C9369283CB9C100EBCA55 /* RickAndMortyCharactersRepository.swift in Sources */,
 				0483D7322838422000890660 /* AppDelegate.swift in Sources */,
 				04991976283C8C3B009FD72B /* ApiCallError.swift in Sources */,
+				04391F9D283D5F9B00F84E6A /* ServiceLocator.swift in Sources */,
 				045A7181283B104400D02C7A /* DetailViewController.swift in Sources */,
 				048C936B283CBA8D00EBCA55 /* DomainError.swift in Sources */,
 				0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */,

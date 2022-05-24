@@ -9,15 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
-        let apiCall = ApiCall()
-        let apiCallErrorToDomainErrorMapper = ApiCallErrorToDomainErrorMapper()
-        let repository = RickAndMortyCharactersRepository(
-            apiRest: apiCall,
-            apiCallErrorToDomainErrorMapper: apiCallErrorToDomainErrorMapper
-        )
-        let getCharactersUseCase = GetCharactersUseCase(repository: repository)
         let recapViewController = RecapViewController()
-        recapViewController.getCharactersUseCase = getCharactersUseCase
+        recapViewController.getCharactersUseCase = ServiceLocator().getCharactersUseCase
         
         let navigationController = UINavigationController(rootViewController: recapViewController)
         window?.rootViewController = navigationController
