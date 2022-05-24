@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             apiRest: apiCall,
             apiCallErrorToDomainErrorMapper: apiCallErrorToDomainErrorMapper
         )
+        let getCharactersUseCase = GetCharactersUseCase(repository: repository)
         let recapViewController = RecapViewController()
-        recapViewController.repository = repository
+        recapViewController.getCharactersUseCase = getCharactersUseCase
         
         let navigationController = UINavigationController(rootViewController: recapViewController)
         window?.rootViewController = navigationController

@@ -4,7 +4,7 @@ class RecapViewController: UIViewController {
     
     var recapTable = UITableView()
     var charactersArray: [Character] = []
-    var repository: Repository?
+    var getCharactersUseCase: GetCharactersUseCase?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class RecapViewController: UIViewController {
     }
     
     private func prepareFetchData() {
-        repository?.fetch(onCompletion: { characters, error in
+        getCharactersUseCase?.execute(onCompletion: { characters, error in
             DispatchQueue.main.async {
                 guard let characters = characters else {
                     print(error as Any)
