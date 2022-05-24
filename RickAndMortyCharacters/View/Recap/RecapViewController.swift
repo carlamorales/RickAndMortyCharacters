@@ -4,6 +4,7 @@ class RecapViewController: UIViewController {
     
     var recapTable = UITableView()
     var charactersArray: [Character] = []
+    var apiRest: ApiRest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class RecapViewController: UIViewController {
     }
     
     private func prepareFetchData() {
-        ApiCall.sharedInstance.fetchData { characters, error in
+        apiRest?.fetchData { characters, error in
             DispatchQueue.main.async {
                 guard let characters = characters else {
                     print(error?.message ?? "Error")

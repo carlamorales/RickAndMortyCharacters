@@ -13,11 +13,3 @@ struct Character: Decodable {
         case image
     }
 }
-
-struct CharactersList: Decodable {
-    let results: [Character]
-}
-
-struct ApiCallError {
-    let message: String
-}

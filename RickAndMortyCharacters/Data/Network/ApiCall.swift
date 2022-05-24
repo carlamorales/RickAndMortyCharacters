@@ -1,7 +1,12 @@
 import Foundation
 
-final class ApiCall {
-    static let sharedInstance = ApiCall()
+final class ApiCall: ApiRest {
+    
+    private let urlSession: URLSession
+    
+    init(session: URLSession = URLSession.shared) {
+        urlSession = session
+    }
     
     func fetchData(onCompletion: @escaping ([Character]?, ApiCallError?) -> Void) {
         let url = URL(string: "https://rickandmortyapi.com/api/character")!
@@ -10,7 +15,7 @@ final class ApiCall {
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = urlSession.dataTask(with: request) { data, response, error in
             if let data = data {
                 if let charactersList = try? JSONDecoder().decode(CharactersList.self, from: data) {
                     onCompletion(charactersList.results, nil)
@@ -23,4 +28,5 @@ final class ApiCall {
         }
         task.resume()
     }
+    
 }

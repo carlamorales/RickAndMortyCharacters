@@ -20,6 +20,9 @@
 		0498BF5C2839FF7900339FBA /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498BF5B2839FF7900339FBA /* ApiCall.swift */; };
 		0498BF5E283A0DCC00339FBA /* DownloadedFromUrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498BF5D283A0DCC00339FBA /* DownloadedFromUrlExtension.swift */; };
 		0499196C283C88B4009FD72B /* RickAndMortyCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499196B283C88B4009FD72B /* RickAndMortyCharactersTests.swift */; };
+		04991974283C8BDC009FD72B /* CharactersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04991973283C8BDC009FD72B /* CharactersList.swift */; };
+		04991976283C8C3B009FD72B /* ApiCallError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04991975283C8C3B009FD72B /* ApiCallError.swift */; };
+		04991978283C8ECB009FD72B /* ApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04991977283C8ECB009FD72B /* ApiRest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0498BF5D283A0DCC00339FBA /* DownloadedFromUrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedFromUrlExtension.swift; sourceTree = "<group>"; };
 		04991969283C88B4009FD72B /* RickAndMortyCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499196B283C88B4009FD72B /* RickAndMortyCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharactersTests.swift; sourceTree = "<group>"; };
+		04991973283C8BDC009FD72B /* CharactersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersList.swift; sourceTree = "<group>"; };
+		04991975283C8C3B009FD72B /* ApiCallError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallError.swift; sourceTree = "<group>"; };
+		04991977283C8ECB009FD72B /* ApiRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +96,15 @@
 		0483D7302838422000890660 /* RickAndMortyCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				04991980283C9BF9009FD72B /* Domain */,
+				0499197E283C9B64009FD72B /* Data */,
+				0499197C283C98E3009FD72B /* Network */,
+				04991979283C9836009FD72B /* View */,
+				04991972283C8B60009FD72B /* Extensions */,
 				0483D7312838422000890660 /* AppDelegate.swift */,
-				0483D7352838422000890660 /* RecapViewController.swift */,
 				0498BF572839A75700339FBA /* RecapTableViewCell.swift */,
-				045A7180283B104400D02C7A /* DetailViewController.swift */,
 				045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */,
 				0438D93B283BC0F60009B141 /* DetailTextTableViewCell.swift */,
-				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
-				0498BF592839CCF800339FBA /* Character.swift */,
-				0498BF552839987400339FBA /* PinToSuperViewExtension.swift */,
-				0498BF5D283A0DCC00339FBA /* DownloadedFromUrlExtension.swift */,
 				0483D73A2838422400890660 /* Assets.xcassets */,
 				0483D73C2838422400890660 /* LaunchScreen.storyboard */,
 				0483D73F2838422400890660 /* Info.plist */,
@@ -113,6 +118,90 @@
 				0499196B283C88B4009FD72B /* RickAndMortyCharactersTests.swift */,
 			);
 			path = RickAndMortyCharactersTests;
+			sourceTree = "<group>";
+		};
+		04991972283C8B60009FD72B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0498BF552839987400339FBA /* PinToSuperViewExtension.swift */,
+				0498BF5D283A0DCC00339FBA /* DownloadedFromUrlExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04991979283C9836009FD72B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0499197A283C984E009FD72B /* Recap */,
+				0499197B283C986D009FD72B /* Detail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0499197A283C984E009FD72B /* Recap */ = {
+			isa = PBXGroup;
+			children = (
+				0483D7352838422000890660 /* RecapViewController.swift */,
+			);
+			path = Recap;
+			sourceTree = "<group>";
+		};
+		0499197B283C986D009FD72B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				045A7180283B104400D02C7A /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0499197C283C98E3009FD72B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0499197D283C9990009FD72B /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0499197D283C9990009FD72B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04991975283C8C3B009FD72B /* ApiCallError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0499197E283C9B64009FD72B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0499197F283C9B71009FD72B /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0499197F283C9B71009FD72B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
+				04991977283C8ECB009FD72B /* ApiRest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04991980283C9BF9009FD72B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				04991981283C9C0D009FD72B /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		04991981283C9C0D009FD72B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0498BF592839CCF800339FBA /* Character.swift */,
+				04991973283C8BDC009FD72B /* CharactersList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0483D7362838422000890660 /* RecapViewController.swift in Sources */,
+				04991978283C8ECB009FD72B /* ApiRest.swift in Sources */,
+				04991974283C8BDC009FD72B /* CharactersList.swift in Sources */,
 				0498BF582839A75700339FBA /* RecapTableViewCell.swift in Sources */,
 				0498BF5E283A0DCC00339FBA /* DownloadedFromUrlExtension.swift in Sources */,
 				0498BF5A2839CCF800339FBA /* Character.swift in Sources */,
@@ -223,6 +314,7 @@
 				0498BF5C2839FF7900339FBA /* ApiCall.swift in Sources */,
 				045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */,
 				0483D7322838422000890660 /* AppDelegate.swift in Sources */,
+				04991976283C8C3B009FD72B /* ApiCallError.swift in Sources */,
 				045A7181283B104400D02C7A /* DetailViewController.swift in Sources */,
 				0438D93C283BC0F60009B141 /* DetailTextTableViewCell.swift in Sources */,
 			);

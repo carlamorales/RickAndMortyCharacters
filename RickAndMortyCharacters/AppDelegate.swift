@@ -9,7 +9,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
-        let navigationController = UINavigationController(rootViewController: RecapViewController())
+        let apiCall = ApiCall()
+        let recapViewController = RecapViewController()
+        recapViewController.apiRest = apiCall
+        
+        let navigationController = UINavigationController(rootViewController: recapViewController)
         window?.rootViewController = navigationController
         
         return true
