@@ -8,7 +8,7 @@ final class ApiCall: ApiRest {
         urlSession = session
     }
     
-    func fetchData(onCompletion: @escaping ([Character]?, ApiCallError?) -> Void) {
+    func fetchData(onCompletion: @escaping (Result <[Character], ApiCallError>) -> Void) {
         let url = URL(string: "https://rickandmortyapi.com/api/character")!
         
         var request = URLRequest(url: url)
@@ -18,12 +18,12 @@ final class ApiCall: ApiRest {
         let task = urlSession.dataTask(with: request) { data, response, error in
             if let data = data {
                 if let charactersList = try? JSONDecoder().decode(CharactersList.self, from: data) {
-                    onCompletion(charactersList.results, nil)
+                    onCompletion(.success(charactersList.results))
                 } else {
-                    onCompletion(nil, ApiCallError(message: "Invalid model"))
+                    onCompletion(.failure(ApiCallError(message: "Invalid Model")))
                 }
             } else {
-                onCompletion(nil, ApiCallError(message: "Invalid request"))
+                onCompletion(.failure(ApiCallError(message: "Invalid Request")))
             }
         }
         task.resume()

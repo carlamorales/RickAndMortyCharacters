@@ -9,11 +9,12 @@ class RickAndMortyCharactersRepository: Repository {
     }
     
     func fetch(onCompletion: @escaping (Result <[Character], DomainError>) -> Void) {
-        apiRest.fetchData { characters, error in
-            if let characters = characters {
+        apiRest.fetchData { result in
+            switch result {
+            case .success(let characters):
                 onCompletion(.success(characters))
-            } else {
-                let domainError = self.apiCallErrorToDomainErrorMapper.reverseMap(value: error ?? ApiCallError(message: "Error"))
+            case .failure(let error):
+                let domainError = self.apiCallErrorToDomainErrorMapper.reverseMap(value: error)
                 onCompletion(.failure(domainError))
             }
         }

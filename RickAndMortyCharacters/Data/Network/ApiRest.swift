@@ -1,3 +1,3 @@
 protocol ApiRest: AnyObject {
-    func fetchData(onCompletion: @escaping ([Character]?, ApiCallError?) -> Void)
+    func fetchData(onCompletion: @escaping (Result <[Character], ApiCallError>) -> Void)
 }
