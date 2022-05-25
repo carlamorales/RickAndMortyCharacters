@@ -1,4 +1,5 @@
 class RecapViewPresenterConcretion: RecapViewPresenter {
+    
     private let getCharactersUseCase: GetCharactersUseCase
     weak var view: RecapView?
     
@@ -7,12 +8,14 @@ class RecapViewPresenterConcretion: RecapViewPresenter {
     }
     
     func getCharacters() {
-        getCharactersUseCase.execute { [weak self] characters, error in
-            if let characters = characters {
+        getCharactersUseCase.execute { [weak self] result in
+            switch result {
+            case .success(let characters):
                 self?.view?.displayCharacters(characters)
-            } else {
-                self?.view?.displayError(error ?? DomainError(description: ""))
+            case .failure(let error):
+                self?.view?.displayError(error)
             }
         }
     }
+    
 }

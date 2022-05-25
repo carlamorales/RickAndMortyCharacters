@@ -1,3 +1,3 @@
 protocol Repository {
-    func fetch(onCompletion: @escaping ([Character]?, DomainError?) -> Void)
+    func fetch(onCompletion: @escaping (Result <[Character], DomainError>) -> Void)
 }

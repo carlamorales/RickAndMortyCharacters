@@ -1,7 +1,7 @@
 import UIKit
 
 class RecapViewDelegate: NSObject {
-    weak var view: RecapViewController?
+    weak var view: RecapView?
 }
 
 extension RecapViewDelegate: UITableViewDelegate {
@@ -9,9 +9,8 @@ extension RecapViewDelegate: UITableViewDelegate {
         guard let view = view else {
             return
         }
-        let detailViewController = DetailViewControllerFactory.makeDetailViewController()
-        detailViewController.character = view.charactersArray[indexPath.row]
-        view.navigationController?.pushViewController(detailViewController, animated: true)
+        let character = view.charactersArray[indexPath.row]
+        view.navigateToNextViewController(character: character)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

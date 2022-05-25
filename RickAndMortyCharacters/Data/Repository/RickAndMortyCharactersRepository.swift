@@ -8,14 +8,13 @@ class RickAndMortyCharactersRepository: Repository {
         self.apiCallErrorToDomainErrorMapper = apiCallErrorToDomainErrorMapper
     }
     
-    func fetch(onCompletion: @escaping ([Character]?, DomainError?) -> Void) {
+    func fetch(onCompletion: @escaping (Result <[Character], DomainError>) -> Void) {
         apiRest.fetchData { characters, error in
             if let characters = characters {
-                let list = characters
-                onCompletion(list, nil)
+                onCompletion(.success(characters))
             } else {
-                let domainError = self.apiCallErrorToDomainErrorMapper.reverseMap(value: error ?? ApiCallError(message: ""))
-                onCompletion(nil, domainError)
+                let domainError = self.apiCallErrorToDomainErrorMapper.reverseMap(value: error ?? ApiCallError(message: "Error"))
+                onCompletion(.failure(domainError))
             }
         }
     }

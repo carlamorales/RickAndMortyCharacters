@@ -1,7 +1,7 @@
 import UIKit
 
 class RecapViewDataSource: NSObject {
-    weak var view: RecapViewController?
+    weak var view: RecapView?
 }
 
 extension RecapViewDataSource: UITableViewDataSource {

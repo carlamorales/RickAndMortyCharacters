@@ -5,9 +5,9 @@ struct GetCharactersUseCase {
         self.repository = repository
     }
     
-    func execute(onCompletion: @escaping ([Character]?, DomainError?) -> Void) {
-        repository.fetch { characters, error in
-            onCompletion(characters, error)
+    func execute(onCompletion: @escaping (Result <[Character], DomainError>) -> Void) {
+        repository.fetch { characters in
+            onCompletion(characters)
         }
     }
 }

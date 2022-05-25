@@ -5,7 +5,8 @@ class ServiceLocator {
     private var repository: RickAndMortyCharactersRepository {
         return RickAndMortyCharactersRepository(
             apiRest: apiRest,
-            apiCallErrorToDomainErrorMapper: apiCallErrorToDomainErrorMapper)
+            apiCallErrorToDomainErrorMapper: apiCallErrorToDomainErrorMapper
+        )
     }
     
     var getCharactersUseCase: GetCharactersUseCase {

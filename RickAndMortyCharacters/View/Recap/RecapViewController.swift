@@ -62,4 +62,9 @@ extension RecapViewController: RecapView {
         print(DomainError(description: ""))
     }
     
+    func navigateToNextViewController(character: Character) {
+        let detailViewController = DetailViewControllerFactory.makeDetailViewController()
+        detailViewController.character = character
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
