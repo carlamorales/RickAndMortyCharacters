@@ -9,15 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
-        let presenter = RecapViewPresenterConcretion(
-            getCharactersUseCase: ServiceLocator().getCharactersUseCase
-        )
-        let recapViewController = RecapViewController(
-            viewDataSource: RecapViewDataSource(),
-            viewDelegate: RecapViewDelegate(),
-            presenter: presenter
-        )
-        presenter.view = recapViewController
+        let recapViewController = RecapViewControllerFactory.makeRecapViewController()
         
         let navigationController = UINavigationController(rootViewController: recapViewController)
         window?.rootViewController = navigationController
