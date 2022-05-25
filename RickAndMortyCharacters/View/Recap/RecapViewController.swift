@@ -4,18 +4,23 @@ class RecapViewController: UIViewController {
     
     private var viewDataSource: RecapViewDataSource?
     private var viewDelegate: RecapViewDelegate?
+    private var presenter: RecapViewPresenter?
     
     var recapTable = UITableView()
     var charactersArray: [Character] = []
-    var getCharactersUseCase: GetCharactersUseCase?
     
     var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
     var shouldCellBeExtended = false
     
-    convenience init(viewDataSource:RecapViewDataSource, viewDelegate: RecapViewDelegate) {
+    convenience init(
+        viewDataSource:RecapViewDataSource,
+        viewDelegate: RecapViewDelegate,
+        presenter: RecapViewPresenter
+    ) {
         self.init()
         self.viewDataSource = viewDataSource
         self.viewDelegate = viewDelegate
+        self.presenter = presenter
     }
 
     override func viewDidLoad() {
@@ -40,16 +45,21 @@ class RecapViewController: UIViewController {
     }
     
     private func prepareFetchData() {
-        getCharactersUseCase?.execute(onCompletion: { characters, error in
-            DispatchQueue.main.async {
-                guard let characters = characters else {
-                    print(error as Any)
-                    return
-                }
-                self.charactersArray = characters
-                self.recapTable.reloadData()
-            }
-        })
+        presenter?.getCharacters()
+    }
+    
+}
+
+extension RecapViewController: RecapView {
+    func displayCharacters(_ list: [Character]) {
+        charactersArray = list
+        DispatchQueue.main.async {
+            self.recapTable.reloadData()
+        }
+    }
+    
+    func displayError(_ error: DomainError) {
+        print(DomainError(description: ""))
     }
     
 }

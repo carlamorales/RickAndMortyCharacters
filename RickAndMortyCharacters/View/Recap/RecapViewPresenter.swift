@@ -1,0 +1,3 @@
+protocol RecapViewPresenter {
+    func getCharacters()
+}

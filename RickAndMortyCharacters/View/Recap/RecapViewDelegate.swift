@@ -9,7 +9,10 @@ extension RecapViewDelegate: UITableViewDelegate {
         guard let view = view else {
             return
         }
-        let detailViewController = DetailViewController(viewDataSource: DetailViewDataSource(), viewDelegate: DetailViewDelegate())
+        let detailViewController = DetailViewController(
+            viewDataSource: DetailViewDataSource(),
+            viewDelegate: DetailViewDelegate()
+        )
         detailViewController.character = view.charactersArray[indexPath.row]
         view.navigationController?.pushViewController(detailViewController, animated: true)
     }
