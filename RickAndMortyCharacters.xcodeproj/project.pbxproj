@@ -25,6 +25,7 @@
 		0483D73B2838422400890660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0483D73A2838422400890660 /* Assets.xcassets */; };
 		0483D73E2838422400890660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0483D73C2838422400890660 /* LaunchScreen.storyboard */; };
 		048C7547283E75C300E5907C /* RecapViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C7546283E75C300E5907C /* RecapViewControllerFactory.swift */; };
+		048C7549283E7EE000E5907C /* DetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C7548283E7EE000E5907C /* DetailViewControllerFactory.swift */; };
 		048C9366283CB90F00EBCA55 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C9365283CB90F00EBCA55 /* Repository.swift */; };
 		048C9369283CB9C100EBCA55 /* RickAndMortyCharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C9368283CB9C100EBCA55 /* RickAndMortyCharactersRepository.swift */; };
 		048C936B283CBA8D00EBCA55 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C936A283CBA8D00EBCA55 /* DomainError.swift */; };
@@ -71,6 +72,7 @@
 		0483D73D2838422400890660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0483D73F2838422400890660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048C7546283E75C300E5907C /* RecapViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewControllerFactory.swift; sourceTree = "<group>"; };
+		048C7548283E7EE000E5907C /* DetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerFactory.swift; sourceTree = "<group>"; };
 		048C9365283CB90F00EBCA55 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		048C9368283CB9C100EBCA55 /* RickAndMortyCharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharactersRepository.swift; sourceTree = "<group>"; };
 		048C936A283CBA8D00EBCA55 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				048C7546283E75C300E5907C /* RecapViewControllerFactory.swift */,
+				048C7548283E7EE000E5907C /* DetailViewControllerFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				0498BF5A2839CCF800339FBA /* Character.swift in Sources */,
 				04391FA1283D6A4500F84E6A /* RecapViewDelegate.swift in Sources */,
 				046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */,
+				048C7549283E7EE000E5907C /* DetailViewControllerFactory.swift in Sources */,
 				041F7D40283D954000B33062 /* RecapViewPresenterConcretion.swift in Sources */,
 				048C7547283E75C300E5907C /* RecapViewControllerFactory.swift in Sources */,
 				0498BF562839987400339FBA /* PinToSuperViewExtension.swift in Sources */,
