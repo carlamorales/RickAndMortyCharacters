@@ -1,0 +1,6 @@
+module Pods_RickAndMortyCharacters_RickAndMortyCharactersTests {
+  umbrella header "Pods-RickAndMortyCharacters-RickAndMortyCharactersTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
