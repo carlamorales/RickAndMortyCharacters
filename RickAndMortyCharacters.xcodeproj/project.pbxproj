@@ -21,10 +21,14 @@
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
 		046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */; };
+		04808A6828411CC200B63E7D /* GetCharactersUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04808A6728411CC200B63E7D /* GetCharactersUseCaseTests.swift */; };
+		04808A6A28411E4800B63E7D /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04808A6928411E4800B63E7D /* RepositoryMock.swift */; };
 		0483D7322838422000890660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483D7312838422000890660 /* AppDelegate.swift */; };
 		0483D7362838422000890660 /* RecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483D7352838422000890660 /* RecapViewController.swift */; };
 		0483D73B2838422400890660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0483D73A2838422400890660 /* Assets.xcassets */; };
 		0483D73E2838422400890660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0483D73C2838422400890660 /* LaunchScreen.storyboard */; };
+		0486076528405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486076428405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift */; };
+		0486076828405D300009EDAE /* ApiRestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486076728405D300009EDAE /* ApiRestMock.swift */; };
 		048C7547283E75C300E5907C /* RecapViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C7546283E75C300E5907C /* RecapViewControllerFactory.swift */; };
 		048C7549283E7EE000E5907C /* DetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C7548283E7EE000E5907C /* DetailViewControllerFactory.swift */; };
 		048C9366283CB90F00EBCA55 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C9365283CB90F00EBCA55 /* Repository.swift */; };
@@ -71,12 +75,16 @@
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
 		046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallErrorToDomainErrorMapper.swift; sourceTree = "<group>"; };
+		04808A6728411CC200B63E7D /* GetCharactersUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersUseCaseTests.swift; sourceTree = "<group>"; };
+		04808A6928411E4800B63E7D /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		0483D72E2838422000890660 /* RickAndMortyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0483D7312838422000890660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0483D7352838422000890660 /* RecapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewController.swift; sourceTree = "<group>"; };
 		0483D73A2838422400890660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0483D73D2838422400890660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0483D73F2838422400890660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0486076428405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharactersRepositoryTests.swift; sourceTree = "<group>"; };
+		0486076728405D300009EDAE /* ApiRestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestMock.swift; sourceTree = "<group>"; };
 		048C7546283E75C300E5907C /* RecapViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewControllerFactory.swift; sourceTree = "<group>"; };
 		048C7548283E7EE000E5907C /* DetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerFactory.swift; sourceTree = "<group>"; };
 		048C9365283CB90F00EBCA55 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				043B5D6E284010BA008CA11E /* Mapper */,
+				0486076328405AA10009EDAE /* Repository */,
 				043589B4283FD12C0045A89D /* Network */,
 			);
 			path = Data;
@@ -143,8 +152,8 @@
 		043589B4283FD12C0045A89D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				04EA3DED283FE85E0026E051 /* AlamofireApiCallTests.swift */,
 				04EA3DEF283FED050026E051 /* ApiCallTests.swift */,
+				04EA3DED283FE85E0026E051 /* AlamofireApiCallTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -163,6 +172,22 @@
 				043B5D6F284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		04808A6528411C9300B63E7D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				04808A6628411CA700B63E7D /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		04808A6628411CA700B63E7D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				04808A6728411CC200B63E7D /* GetCharactersUseCaseTests.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		0483D7252838422000890660 = {
@@ -206,6 +231,23 @@
 			path = RickAndMortyCharacters;
 			sourceTree = "<group>";
 		};
+		0486076328405AA10009EDAE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0486076428405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0486076628405CF80009EDAE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0486076728405D300009EDAE /* ApiRestMock.swift */,
+				04808A6928411E4800B63E7D /* RepositoryMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		048C7545283E758400E5907C /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +277,8 @@
 		0499196A283C88B4009FD72B /* RickAndMortyCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
+				0486076628405CF80009EDAE /* Mock */,
+				04808A6528411C9300B63E7D /* Domain */,
 				043589B3283FD11F0045A89D /* Data */,
 			);
 			path = RickAndMortyCharactersTests;
@@ -311,8 +355,8 @@
 			isa = PBXGroup;
 			children = (
 				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
-				04991977283C8ECB009FD72B /* ApiRest.swift */,
 				048E92D9283FBF6100E526FE /* AlamofireApiCall.swift */,
+				04991977283C8ECB009FD72B /* ApiRest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -543,8 +587,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04808A6828411CC200B63E7D /* GetCharactersUseCaseTests.swift in Sources */,
+				0486076528405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift in Sources */,
 				043B5D70284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift in Sources */,
 				04EA3DF0283FED050026E051 /* ApiCallTests.swift in Sources */,
+				04808A6A28411E4800B63E7D /* RepositoryMock.swift in Sources */,
+				0486076828405D300009EDAE /* ApiRestMock.swift in Sources */,
 				04EA3DEE283FE85E0026E051 /* AlamofireApiCallTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
