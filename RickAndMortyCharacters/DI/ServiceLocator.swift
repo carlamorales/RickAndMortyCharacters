@@ -1,5 +1,5 @@
 class ServiceLocator {
-    private let apiRest = ApiCall()
+    private let apiRest = AlamofireApiCall(network: RickAndMortyApiNetwork())
     private let apiCallErrorToDomainErrorMapper = ApiCallErrorToDomainErrorMapper()
     
     private var repository: RickAndMortyCharactersRepository {

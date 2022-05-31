@@ -21,7 +21,10 @@
 		043BAF322841C25400BEAD91 /* DetailViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BAF312841C25400BEAD91 /* DetailViewDelegateTests.swift */; };
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
+		046DE1FA28467A6C002AF702 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DE1F928467A6C002AF702 /* ApiNetwork.swift */; };
 		046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */; };
+		047ADCAB2846546A000DB8FA /* RickAndMortyApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADCAA2846546A000DB8FA /* RickAndMortyApiNetwork.swift */; };
+		047ADCAD28466295000DB8FA /* RickAndMortyApiNetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADCAC28466295000DB8FA /* RickAndMortyApiNetworkMock.swift */; };
 		04808A6828411CC200B63E7D /* GetCharactersUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04808A6728411CC200B63E7D /* GetCharactersUseCaseTests.swift */; };
 		04808A6A28411E4800B63E7D /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04808A6928411E4800B63E7D /* RepositoryMock.swift */; };
 		0483D7322838422000890660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483D7312838422000890660 /* AppDelegate.swift */; };
@@ -90,7 +93,10 @@
 		043BAF312841C25400BEAD91 /* DetailViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegateTests.swift; sourceTree = "<group>"; };
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
+		046DE1F928467A6C002AF702 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
 		046EC120283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallErrorToDomainErrorMapper.swift; sourceTree = "<group>"; };
+		047ADCAA2846546A000DB8FA /* RickAndMortyApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyApiNetwork.swift; sourceTree = "<group>"; };
+		047ADCAC28466295000DB8FA /* RickAndMortyApiNetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyApiNetworkMock.swift; sourceTree = "<group>"; };
 		04808A6728411CC200B63E7D /* GetCharactersUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersUseCaseTests.swift; sourceTree = "<group>"; };
 		04808A6928411E4800B63E7D /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		0483D72E2838422000890660 /* RickAndMortyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +293,7 @@
 				0486076728405D300009EDAE /* ApiRestMock.swift */,
 				04808A6928411E4800B63E7D /* RepositoryMock.swift */,
 				04A5A1EC28415A3700C2D29D /* RecapViewMock.swift */,
+				047ADCAC28466295000DB8FA /* RickAndMortyApiNetworkMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -398,9 +405,11 @@
 		0499197F283C9B71009FD72B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
-				048E92D9283FBF6100E526FE /* AlamofireApiCall.swift */,
 				04991977283C8ECB009FD72B /* ApiRest.swift */,
+				0498BF5B2839FF7900339FBA /* ApiCall.swift */,
+				046DE1F928467A6C002AF702 /* ApiNetwork.swift */,
+				047ADCAA2846546A000DB8FA /* RickAndMortyApiNetwork.swift */,
+				048E92D9283FBF6100E526FE /* AlamofireApiCall.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -657,10 +666,12 @@
 				04991974283C8BDC009FD72B /* CharactersList.swift in Sources */,
 				0498BF582839A75700339FBA /* RecapTableViewCell.swift in Sources */,
 				0422FAC3283D3DF20023BE66 /* GetCharactersUseCase.swift in Sources */,
+				046DE1FA28467A6C002AF702 /* ApiNetwork.swift in Sources */,
 				0498BF5E283A0DCC00339FBA /* DownloadedFromUrlExtension.swift in Sources */,
 				0498BF5A2839CCF800339FBA /* Character.swift in Sources */,
 				04391FA1283D6A4500F84E6A /* RecapViewDelegate.swift in Sources */,
 				046EC121283D27D500FCE6B3 /* ApiCallErrorToDomainErrorMapper.swift in Sources */,
+				047ADCAB2846546A000DB8FA /* RickAndMortyApiNetwork.swift in Sources */,
 				048C7549283E7EE000E5907C /* DetailViewControllerFactory.swift in Sources */,
 				041F7D40283D954000B33062 /* RecapViewPresenterConcretion.swift in Sources */,
 				048C7547283E75C300E5907C /* RecapViewControllerFactory.swift in Sources */,
@@ -692,6 +703,7 @@
 				04808A6828411CC200B63E7D /* GetCharactersUseCaseTests.swift in Sources */,
 				04D3CA0828450C6C00544B8A /* DetailViewDataSourceTests.swift in Sources */,
 				04BF585E28416F2D0072396C /* RecapViewDelegateTests.swift in Sources */,
+				047ADCAD28466295000DB8FA /* RickAndMortyApiNetworkMock.swift in Sources */,
 				0486076528405ABF0009EDAE /* RickAndMortyCharactersRepositoryTests.swift in Sources */,
 				04BF5860284178A20072396C /* RecapViewPresenterConcretionTests.swift in Sources */,
 				043B5D70284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift in Sources */,
