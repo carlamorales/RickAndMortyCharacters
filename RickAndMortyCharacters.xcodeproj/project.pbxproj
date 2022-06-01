@@ -19,6 +19,8 @@
 		04391FA5283D810A00F84E6A /* DetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04391FA4283D810A00F84E6A /* DetailViewDelegate.swift */; };
 		043B5D70284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B5D6F284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift */; };
 		043BAF322841C25400BEAD91 /* DetailViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BAF312841C25400BEAD91 /* DetailViewDelegateTests.swift */; };
+		043D56CB2846BB200086D983 /* RecapViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D56CA2846BB200086D983 /* RecapViewControllerFactoryTests.swift */; };
+		043D56CD2846BB670086D983 /* DetailViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D56CC2846BB670086D983 /* DetailViewControllerFactoryTests.swift */; };
 		045A7181283B104400D02C7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7180283B104400D02C7A /* DetailViewController.swift */; };
 		045A7183283B12C900D02C7A /* DetailPictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */; };
 		046DE1FA28467A6C002AF702 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DE1F928467A6C002AF702 /* ApiNetwork.swift */; };
@@ -91,6 +93,8 @@
 		04391FA4283D810A00F84E6A /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
 		043B5D6F284010DA008CA11E /* ApiCallErrorToDomainErrorMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallErrorToDomainErrorMapperTests.swift; sourceTree = "<group>"; };
 		043BAF312841C25400BEAD91 /* DetailViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegateTests.swift; sourceTree = "<group>"; };
+		043D56CA2846BB200086D983 /* RecapViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewControllerFactoryTests.swift; sourceTree = "<group>"; };
+		043D56CC2846BB670086D983 /* DetailViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 		045A7180283B104400D02C7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045A7182283B12C900D02C7A /* DetailPictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictureTableViewCell.swift; sourceTree = "<group>"; };
 		046DE1F928467A6C002AF702 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
@@ -220,6 +224,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		043D56C92846BAE00086D983 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				043D56CA2846BB200086D983 /* RecapViewControllerFactoryTests.swift */,
+				043D56CC2846BB670086D983 /* DetailViewControllerFactoryTests.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		04808A6528411C9300B63E7D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				0486076628405CF80009EDAE /* Mock */,
+				043D56C92846BAE00086D983 /* Factory */,
 				04808A6528411C9300B63E7D /* Domain */,
 				043589B3283FD11F0045A89D /* Data */,
 				04E2F2D928412B870046195F /* View */,
@@ -701,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04808A6828411CC200B63E7D /* GetCharactersUseCaseTests.swift in Sources */,
+				043D56CB2846BB200086D983 /* RecapViewControllerFactoryTests.swift in Sources */,
 				04D3CA0828450C6C00544B8A /* DetailViewDataSourceTests.swift in Sources */,
 				04BF585E28416F2D0072396C /* RecapViewDelegateTests.swift in Sources */,
 				047ADCAD28466295000DB8FA /* RickAndMortyApiNetworkMock.swift in Sources */,
@@ -713,6 +728,7 @@
 				043BAF322841C25400BEAD91 /* DetailViewDelegateTests.swift in Sources */,
 				04E2F2DB28412C180046195F /* RecapViewDataSourceTests.swift in Sources */,
 				0486076828405D300009EDAE /* ApiRestMock.swift in Sources */,
+				043D56CD2846BB670086D983 /* DetailViewControllerFactoryTests.swift in Sources */,
 				04EA3DEE283FE85E0026E051 /* AlamofireApiCallTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

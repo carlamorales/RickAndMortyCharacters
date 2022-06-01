@@ -12,8 +12,14 @@ class DetailPictureTableViewCell: UITableViewCell {
     
     private let characterPictureImageView = UIImageView()
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        characterPictureImageView.image = UIImage(named: "placeholder")
+    }
+    
     private func prepareCell() {
         contentView.addSubview(characterPictureImageView)
+        characterPictureImageView.image = UIImage(named: "placeholder")
         characterPictureImageView.downloaded(from: character?.image ?? "")
     }
     

@@ -16,6 +16,11 @@ class RecapTableViewCell: UITableViewCell {
     private let characterPictureImageView = UIImageView()
     let expandAndContractCellButton = UIButton()
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        characterPictureImageView.image = UIImage(named: "placeholder")
+    }
+    
     private func prepareCell() {
         contentView.addSubview(characterNameLabel)
         contentView.addSubview(characterSpeciesLabel)
@@ -26,6 +31,7 @@ class RecapTableViewCell: UITableViewCell {
         characterNameLabel.text = character?.name
         characterSpeciesLabel.text = character?.species
         characterStatusLabel.text = character?.status
+        characterPictureImageView.image = UIImage(named: "placeholder")
         characterPictureImageView.downloaded(from: character?.image ?? "")
     }
     
