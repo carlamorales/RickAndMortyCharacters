@@ -1,8 +1,11 @@
 PODS:
+  - AFNetworkingModule (0.0.1):
+    - Alamofire
   - Alamofire (5.6.1)
   - Mimic (1.3.2)
 
 DEPENDENCIES:
+  - AFNetworkingModule (from `/Users/mac/desktop/AFNetworkingModule`)
   - Alamofire
   - Mimic
 
@@ -11,10 +14,15 @@ SPEC REPOS:
     - Alamofire
     - Mimic
 
+EXTERNAL SOURCES:
+  AFNetworkingModule:
+    :path: "/Users/mac/desktop/AFNetworkingModule"
+
 SPEC CHECKSUMS:
+  AFNetworkingModule: e93f51989ae09119db4fc630c46b6b478245589a
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   Mimic: d7086284f407486ad28cb0e41ef060a2911a7634
 
-PODFILE CHECKSUM: e00a2b60739b86b65a06ab98eab12bba560d07a4
+PODFILE CHECKSUM: 8f487104a9034a46ad2f98e2ea54db0e2ec29d96
 
 COCOAPODS: 1.11.3

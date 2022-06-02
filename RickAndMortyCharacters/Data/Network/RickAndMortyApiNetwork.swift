@@ -1,13 +1,14 @@
-import Alamofire
+import AFNetworkingModule
 
 class RickAndMortyApiNetwork: ApiNetwork {
     
     func request(url: String, onCompletion: @escaping (Result<[Character], ApiCallError>) -> Void) {
-        AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: CharactersList.self) { response in
-            if let charactersList = response.value?.results {
-                onCompletion(.success(charactersList))
-            } else {
-                onCompletion(.failure(ApiCallError(message: "Error")))
+        AFNetworkingModule().networkingModule(url: url) { (result: Result<CharactersList, ApiCallError>) in
+            switch result {
+            case .success(let list):
+                onCompletion(.success(list.results))
+            case .failure(let error):
+                onCompletion(.failure(error))
             }
         }
     }

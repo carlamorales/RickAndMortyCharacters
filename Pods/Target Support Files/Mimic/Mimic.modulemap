@@ -1,4 +1,4 @@
-module Mimic {
+framework module Mimic {
   umbrella header "Mimic-umbrella.h"
 
   export *

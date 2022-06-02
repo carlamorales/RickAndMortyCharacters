@@ -1,4 +1,4 @@
-module Pods_RickAndMortyCharacters {
+framework module Pods_RickAndMortyCharacters {
   umbrella header "Pods-RickAndMortyCharacters-umbrella.h"
 
   export *
