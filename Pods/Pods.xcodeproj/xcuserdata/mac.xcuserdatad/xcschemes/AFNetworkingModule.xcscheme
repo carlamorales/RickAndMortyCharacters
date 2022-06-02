@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ECA69F7BDEABE9E4F0C64293F456329A"
-               BuildableName = "Mimic.framework"
-               BlueprintName = "Mimic"
+               BlueprintIdentifier = "7F0CC694B257ADC9A46F86C32616682D"
+               BuildableName = "AFNetworkingModule.framework"
+               BlueprintName = "AFNetworkingModule"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -1,0 +1,26 @@
+{
+  "name": "AFNetworkingModule",
+  "platforms": {
+    "ios": "15.0"
+  },
+  "version": "0.0.1",
+  "summary": "AFNetworkingModule framework",
+  "description": "AFNetworkingModule framework, including example app",
+  "homepage": "https://github.com/carlamorales",
+  "license": "MIT",
+  "authors": "carlamorales",
+  "source": {
+    "git": "https://github.com/carlamorales/AFNetworkingModule.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "AFNetworkingModule",
+    "AFNetworkingModule/**/*.{h,m}"
+  ],
+  "exclude_files": "AFNetworkingModule/Exclude",
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  }
+}
