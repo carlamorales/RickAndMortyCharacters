@@ -6,7 +6,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworkingModule (from `/Users/mac/desktop/AFNetworkingModule`)
-  - Alamofire
   - Mimic
 
 SPEC REPOS:
@@ -23,6 +22,6 @@ SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   Mimic: d7086284f407486ad28cb0e41ef060a2911a7634
 
-PODFILE CHECKSUM: 8f487104a9034a46ad2f98e2ea54db0e2ec29d96
+PODFILE CHECKSUM: f9d9efd0def1706df1be063e0920cc4a83edbea4
 
 COCOAPODS: 1.11.3
