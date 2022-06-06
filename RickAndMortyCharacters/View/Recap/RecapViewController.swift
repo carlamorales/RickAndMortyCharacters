@@ -1,4 +1,5 @@
 import UIKit
+import DemoLib
 
 class RecapViewController: UIViewController {
     
@@ -33,7 +34,8 @@ class RecapViewController: UIViewController {
     private func prepareTable() {
         view.addSubview(recapTable)
         recapTable.pin(to: view)
-        recapTable.register(RecapTableViewCell.self, forCellReuseIdentifier: "recapCell")
+        //recapTable.register(RecapTableViewCell.self, forCellReuseIdentifier: "recapCell")
+        recapTable.register(Cell.self, forCellReuseIdentifier: "1")
         title = "CHARACTERS RECAP"
     }
     

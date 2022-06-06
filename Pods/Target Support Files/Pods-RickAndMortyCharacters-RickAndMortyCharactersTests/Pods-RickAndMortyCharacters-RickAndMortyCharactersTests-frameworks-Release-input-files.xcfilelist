@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-RickAndMortyCharacters-RickAndMortyCharactersTests/Pods-RickAndMortyCharacters-RickAndMortyCharactersTests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworkingModule/AFNetworkingModule.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DemoLib/DemoLib.framework
 ${BUILT_PRODUCTS_DIR}/Mimic/Mimic.framework
