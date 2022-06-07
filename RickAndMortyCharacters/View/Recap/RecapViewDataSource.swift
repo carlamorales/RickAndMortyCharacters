@@ -20,7 +20,9 @@ extension RecapViewDataSource: UITableViewDataSource {
 //        cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
 //        cell.expandAndContractCellButton.tag = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "1", for: indexPath) as! Cell
+        let cellContent = view?.charactersArray[indexPath.row]
         cell.prepare()
+        cell.setCellValues(name: cellContent?.name ?? "", species: cellContent?.species ?? "", status: cellContent?.status ?? "", image: cellContent?.image ?? "")
         return cell
     }
     
