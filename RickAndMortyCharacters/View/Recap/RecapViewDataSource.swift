@@ -14,15 +14,19 @@ extension RecapViewDataSource: UITableViewDataSource {
 //        guard let view = view else {
 //            return UITableViewCell()
 //        }
-//        let cell = view.recapTable.dequeueReusableCell(withIdentifier: "recapCell") as! RecapTableViewCell
-//        cell.character = view.charactersArray[indexPath.row]
-//
-//        cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
-//        cell.expandAndContractCellButton.tag = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "1", for: indexPath) as! Cell
         let cellContent = view?.charactersArray[indexPath.row]
         cell.prepare()
-        cell.setCellValues(name: cellContent?.name ?? "", species: cellContent?.species ?? "", status: cellContent?.status ?? "", image: cellContent?.image ?? "")
+        cell.setCellValues(
+            name: cellContent?.name ?? "",
+            species: cellContent?.species ?? "",
+            status: cellContent?.status ?? "",
+            image: cellContent?.image ?? ""
+        )
+        
+        cell.expandAndContractCellButton.addTarget(self, action: #selector(expandAndContractCell(sender:)), for: .touchUpInside)
+        cell.expandAndContractCellButton.tag = indexPath.row
+        
         return cell
     }
     
